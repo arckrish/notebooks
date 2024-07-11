@@ -28,6 +28,7 @@ COPY utils ./utils/
 USER root
 
 # Install usefull OS packages
+RUN dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 RUN dnf install -y jq unixODBC postgresql git-lfs libsndfile && dnf clean all && rm -rf /var/cache/yum
 
 # Disable announcement plugin of jupyterlab
