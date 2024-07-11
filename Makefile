@@ -142,6 +142,27 @@ runtime-pytorch-ubi8-python-3.8: base-ubi8-python-3.8
 runtime-cuda-tensorflow-ubi8-python-3.8: cuda-ubi8-python-3.8
 	$(call image,$@,runtimes/tensorflow/ubi8-python-3.8,$<)
 
+# Build and push runtime-minimal-ubi8-python-3.9 image to the registry
+.PHONY: runtime-minimal-ubi8-python-3.9
+runtime-minimal-ubi8-python-3.9: base-ubi8-python-3.9
+	$(call image,$@,runtimes/minimal/ubi8-python-3.9,$<)
+
+# Build and push runtime-datascience-ubi8-python-3.9 image to the registry
+.PHONY: runtime-datascience-ubi8-python-3.9
+runtime-datascience-ubi8-python-3.9: base-ubi8-python-3.9
+	$(call image,$@,runtimes/datascience/ubi8-python-3.9,$<)
+
+# Build and push runtime-pytorch-ubi8-python-3.9 image to the registry
+.PHONY: runtime-pytorch-ubi8-python-3.9
+runtime-pytorch-ubi8-python-3.9: base-ubi8-python-3.9
+	$(call image,$@,runtimes/pytorch/ubi8-python-3.9,$<)
+
+# Build and push runtime-cuda-tensorflow-ubi8-python-3.9 image to the registry
+.PHONY: runtime-cuda-tensorflow-ubi8-python-3.9
+runtime-cuda-tensorflow-ubi8-python-3.9: cuda-ubi8-python-3.9
+	$(call image,$@,runtimes/tensorflow/ubi8-python-3.9,$<)
+
+
 ####################################### Buildchain for Python 3.9 using ubi9 #######################################
 # Build and push jupyter-minimal-ubi9-python-3.9 image to the registry
 
